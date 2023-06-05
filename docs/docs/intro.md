@@ -30,3 +30,4 @@ Feral is written in PHP and uses Composer and Symfony. Getting started with the 
 
 See [Quick Start Guide](getting-started/quick-start.md) 
 
+

@@ -30,10 +30,18 @@ For more information on Nodes, [see Nodes](./nodes)
 An edge connects nodes together creating a process flow. An edge is the combinationo of a source node, a result, and a destination node. A source node can have multiple edges, each with a unique result. A destination node can have multiple edges with non-unique results.
 
 ```
-                    ---- true  ---> NODE_B --- ok ---
-   NODE_A  --- ok --|                                | --> NODE_D
-                    ---- false ---> NODE_C --- ok ---
+                 ---- true  ---> NODE_B --- ok ---
+   NODE_A  -----|                                 | --> NODE_D
+                 ---- false ---> NODE_C --- ok ---
 
+```
+
+```mermaid
+graph LR;
+    NODE_A-->|true|NODE_B;
+    NODE_A-->|false|NODE_C;
+    NODE_B-->|ok|NODE_D;
+    NODE_C-->|ok|NODE_D;
 ```
 
 For more information on edges, [see Edges](./edges)
